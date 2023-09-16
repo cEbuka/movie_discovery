@@ -2,22 +2,21 @@ import useMovieData from "../hooks/useMovieData"
 import '../styles/movie.css'
 
 const MoviesList = () => {
-    const { movies, loading, error} = useMovieData()
-    const movie_pic = movies.forEach(movie => {
-        return `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-    })
+    const { movies} = useMovieData()
     return (
         <>
         <div className="movies-section">
         <h1>Featured Movies</h1>
-        <img alt="movie_pic" src={movie_pic}/>
-        <ul>
+        <div className="movie-card">
         {movies.map((movie) => 
-            <li key={movie.id}>
-            <h2>{movie.title}</h2>
-            <p>{movie.overview}</p>
-            </li>)}
-        </ul>
+            <div key={movie.id}>
+            <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie_picture"/>
+            <div className="movie-details">
+            <span className="movie-title">{movie.title}</span>
+            <span>{movie.vote_average}</span>
+            </div>
+            </div>)}
+        </div>
         </div>
         </>
     )
