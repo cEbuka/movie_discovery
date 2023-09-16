@@ -13,7 +13,7 @@ const MoviesList = () => {
             <img className="movie-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie_picture"/>
             <div className="movie-details">
             <span data-testid="movie-title" className="movie-title">{movie.title}</span>
-            <span data-testid="movie_overview" ></span>{movie.vote_average}</span>
+            <span data-testid="movie_overview" >{movie.overview}</span>
             </div>
             </div>)}
         </div>
