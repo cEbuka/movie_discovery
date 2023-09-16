@@ -1,17 +1,30 @@
-
+.movie-section {
+    display: flex;
+    gap: 0;
+}
 
 .movie-card {
     display: grid;
     grid-gap: 80px;
     grid-template-columns: repeat(4, 1fr);
-    margin: 161px 98px ;
+    margin: 0 8rem;
 }
 
+.card {
+    border: 0.025em solid #111827;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background: #111827;
+}
 .movie-details {
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .movie-title {
@@ -22,4 +35,31 @@
 
 .movie-image {
     width: 100%;
+}
+
+.f-movies {
+    display: flex;
+    margin: 2rem 8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-movies h1 {
+    font-size: 20px;
+}
+
+.f-movies h3 {
+    text-align: center;
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.more {
+    width: 20px;
+    height: 20px;
+}
+
+.more:hover {
+    color: black;
 }
